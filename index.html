@@ -1,4 +1,3 @@
-<!-- index.html - Home Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,19 +12,18 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f0f4f8; /* Light blue-gray background */
-            /* Removed flex properties for vertical centering */
             display: block; /* Ensures content flows naturally */
             margin: 0;
             padding-top: 10px; /* Exactly 10px padding from the top */
-            padding-left: 0.5rem; /* Keep horizontal padding for mobile */
-            padding-right: 0.5rem; /* Keep horizontal padding for mobile */
+            padding-left: 0.25rem; /* Minimal horizontal padding for mobile */
+            padding-right: 0.25rem; /* Minimal horizontal padding for mobile */
             padding-bottom: 0.5rem; /* Add bottom padding */
             box-sizing: border-box; /* Ensures padding is included in element's total width/height */
             min-height: 100vh; /* Ensures body takes full height for consistent background */
         }
         .container {
             background-color: #ffffff; /* White background for the content area */
-            padding: 1rem; /* Adjusted for mobile comfort to give more internal space */
+            padding: 1rem 0; /* 1rem top/bottom, 0 horizontal for mobile */
             border-radius: 1.5rem; /* More rounded corners */
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Soft shadow */
             text-align: center;
@@ -43,7 +41,7 @@
                 padding-bottom: 1rem;
             }
             .container {
-                padding: 2.5rem;
+                padding: 2.5rem; /* Restore full padding for desktop */
                 margin-bottom: 2rem;
             }
         }
@@ -122,13 +120,11 @@
             font-family: 'Lobster', cursive; /* Apply the Lobster font */
             color: #334155; /* Darker text for heading */
             margin-bottom: 1.5rem;
-            font-size: 9vw; /* Use viewport width for responsive sizing */
+            font-size: 20vw; /* Aggressive viewport width for responsive sizing on mobile */
             font-weight: 400; /* Lobster usually looks best at default weight */
             line-height: 1; /* Adjust line height for very large text */
-            white-space: nowrap; /* Prevent text from wrapping prematurely */
-            overflow: hidden; /* Hide overflow if text becomes too large */
-            text-overflow: clip; /* Clip overflowing text */
-            max-width: 100%; /* Ensure it doesn't break container */
+            word-break: break-word; /* Allow words to break if necessary */
+            max-width: 100%; /* Ensure it doesn't break parent container */
         }
         @media (min-width: 768px) {
             h1 {
@@ -180,7 +176,7 @@
 
     <!-- QR Code Section -->
     <div class="qr-section">
-        <img src="qrcode.png" alt="QR code to open on another phone" onerror="this.onerror=null;this.src='https://placehold.co/200x200/e0e0e0/333333?text=QR+Code';">
+        <img src="qr.png" alt="QR code to open on another phone" onerror="this.onerror=null;this.src='https://placehold.co/200x200/e0e0e0/333333?text=QR+Code';">
         <p>Scan this to open on another phone</p>
     </div>
 </body>
