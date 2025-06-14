@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ryan Wedding Website</title>
+    <title>Our Wedding Website</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -81,11 +81,12 @@
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
-        .btn-itinerary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Purple-blue gradient */
+        /* Updated button colors to light pastel blue variations */
+        .btn-program {
+            background: linear-gradient(135deg, #a7d9f7 0%, #7dbcdb 100%); /* Light pastel blue 1 */
         }
         .btn-photos {
-            background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%); /* Orange-pink gradient */
+            background: linear-gradient(135deg, #b3e6ff 0%, #9bc4d6 100%); /* Light pastel blue 2 */
         }
         .btn-description {
             font-size: 0.875rem; /* Slightly smaller text for description on mobile */
@@ -113,12 +114,12 @@
 </head>
 <body>
     <div class="container">
-        <!-- <h1>Welcome to Our Wedding!</h1> -->
+        <h1>Welcome to Our Wedding!</h1>
         <div class="button-group">
-            <!-- Itinerary Button -->
-            <a href="itinerary.html" class="btn btn-itinerary">
-                <span>Wedding Itinerary</span>
-                <p class="btn-description">View the full schedule of events, times, and locations for our special day.</p>
+            <!-- Wedding Program Button -->
+            <a href="itinerary.html" class="btn btn-program">
+                <span>Wedding Program</span>
+                <p class="btn-description">View the full schedule of events and times for our special day.</p>
             </a>
             <!-- Photo Upload Link -->
             <a href="https://photos.app.goo.gl/YourPhotoUploadLinkHere" target="_blank" class="btn btn-photos">
