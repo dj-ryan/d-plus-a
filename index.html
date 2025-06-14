@@ -6,36 +6,43 @@
     <title>Our Wedding Website</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts - Inter for general text, Lobster for the heading and button titles -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lobster&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f0f4f8; /* Light blue-gray background */
-            display: flex; /* Keep flexbox for horizontal centering */
-            flex-direction: column; /* Stack content vertically */
-            justify-content: center; /* Center content vertically by default */
-            align-items: center; /* Keep content centered horizontally */
-            min-height: 100vh;
+            /* Removed flex properties for vertical centering */
+            display: block; /* Ensures content flows naturally */
             margin: 0;
-            padding: 1rem; /* Added padding for very small screens */
+            padding-top: 10px; /* Exactly 10px padding from the top */
+            padding-left: 0.5rem; /* Keep horizontal padding for mobile */
+            padding-right: 0.5rem; /* Keep horizontal padding for mobile */
+            padding-bottom: 0.5rem; /* Add bottom padding */
             box-sizing: border-box; /* Ensures padding is included in element's total width/height */
+            min-height: 100vh; /* Ensures body takes full height for consistent background */
         }
         .container {
             background-color: #ffffff; /* White background for the content area */
-            padding: 1.5rem; /* Adjusted for mobile comfort */
+            padding: 1rem; /* Adjusted for mobile comfort to give more internal space */
             border-radius: 1.5rem; /* More rounded corners */
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Soft shadow */
             text-align: center;
             width: 100%; /* Take full width on small screens */
             max-width: 700px; /* Max width for desktop */
             animation: fadeIn 1s ease-out;
-            margin-top: 1rem; /* Smaller top margin for mobile */
-            margin-bottom: 1rem; /* Add a consistent bottom margin too */
+            margin: 0 auto; /* Center container horizontally */
+            margin-bottom: 0.5rem; /* Add a consistent bottom margin */
         }
         @media (min-width: 768px) { /* Larger padding and margin on desktop */
+            body {
+                padding-top: 10px; /* Keep 10px from top on desktop too */
+                padding-left: 1rem;
+                padding-right: 1rem;
+                padding-bottom: 1rem;
+            }
             .container {
                 padding: 2.5rem;
-                margin-top: 2rem;
                 margin-bottom: 2rem;
             }
         }
@@ -64,7 +71,7 @@
             border-radius: 1rem; /* Rounded button corners */
             font-weight: 600;
             color: #ffffff;
-            font-size: 1.125rem; /* Slightly smaller font for mobile readability */
+            /* Font size handled by span within .btn */
             transition: all 0.3s ease;
             text-decoration: none; /* Remove underline from links */
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -74,7 +81,6 @@
         @media (min-width: 768px) {
             .btn {
                 padding: 1.5rem 2rem;
-                font-size: 1.25rem; /* Larger font size on desktop */
             }
         }
         .btn:hover {
@@ -88,6 +94,18 @@
         .btn-photos {
             background: linear-gradient(135deg, #b3e6ff 0%, #9bc4d6 100%); /* Light pastel blue 2 */
         }
+        .btn span { /* Apply Lobster font and sizing to the span within the button */
+            font-family: 'Lobster', cursive;
+            font-size: 2rem; /* Initial size for button text */
+            font-weight: 400;
+            line-height: 1.2;
+            text-align: center;
+        }
+        @media (min-width: 768px) {
+            .btn span {
+                font-size: 2.5rem; /* Larger button text on desktop */
+            }
+        }
         .btn-description {
             font-size: 0.875rem; /* Slightly smaller text for description on mobile */
             color: rgba(255, 255, 255, 0.9);
@@ -100,21 +118,27 @@
             }
         }
         h1 {
+            font-family: 'Lobster', cursive; /* Apply the Lobster font */
             color: #334155; /* Darker text for heading */
             margin-bottom: 1.5rem;
-            font-size: 2rem; /* Adjusted for mobile comfort */
-            font-weight: 700;
+            font-size: 9vw; /* Use viewport width for responsive sizing */
+            font-weight: 400; /* Lobster usually looks best at default weight */
+            line-height: 1; /* Adjust line height for very large text */
+            white-space: nowrap; /* Prevent text from wrapping prematurely */
+            overflow: hidden; /* Hide overflow if text becomes too large */
+            text-overflow: clip; /* Clip overflowing text */
+            max-width: 100%; /* Ensure it doesn't break container */
         }
         @media (min-width: 768px) {
             h1 {
-                font-size: 2.5rem; /* Large heading on desktop */
+                font-size: 10rem; /* Fixed large size for desktop */
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to Our Wedding!</h1>
+        <h1>David + Audrey - 2025</h1>
         <div class="button-group">
             <!-- Wedding Program Button -->
             <a href="itinerary.html" class="btn btn-program">
