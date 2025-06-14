@@ -1,3 +1,4 @@
+<!-- index.html - Home Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,6 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f0f4f8; /* Light blue-gray background */
-            /* Removed flex properties for vertical centering */
             display: block; /* Ensures content flows naturally */
             margin: 0;
             padding-top: 10px; /* Exactly 10px padding from the top */
@@ -32,7 +32,7 @@
             max-width: 700px; /* Max width for desktop */
             animation: fadeIn 1s ease-out;
             margin: 0 auto; /* Center container horizontally */
-            margin-bottom: 0.5rem; /* Add a consistent bottom margin */
+            margin-bottom: 1.5rem; /* Consistent bottom margin for all cards */
         }
         @media (min-width: 768px) { /* Larger padding and margin on desktop */
             body {
@@ -54,7 +54,6 @@
             display: flex;
             flex-direction: column; /* Stack buttons vertically on small screens */
             gap: 1.5rem; /* Space between buttons */
-            margin-top: 2rem;
         }
         @media (min-width: 768px) { /* On medium screens and up, display buttons in a row */
             .button-group {
@@ -71,7 +70,6 @@
             border-radius: 1rem; /* Rounded button corners */
             font-weight: 600;
             color: #ffffff;
-            /* Font size handled by span within .btn */
             transition: all 0.3s ease;
             text-decoration: none; /* Remove underline from links */
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -120,24 +118,22 @@
         h1 {
             font-family: 'Lobster', cursive; /* Apply the Lobster font */
             color: #334155; /* Darker text for heading */
-            margin-bottom: 1.5rem;
-            font-size: 9vw; /* Use viewport width for responsive sizing */
+            margin-bottom: 0; /* Remove margin from h1 as container provides padding */
+            font-size: 2rem; /* Matched to button title size */
             font-weight: 400; /* Lobster usually looks best at default weight */
-            line-height: 1; /* Adjust line height for very large text */
-            white-space: nowrap; /* Prevent text from wrapping prematurely */
-            overflow: hidden; /* Hide overflow if text becomes too large */
-            text-overflow: clip; /* Clip overflowing text */
+            line-height: 1.2; /* Adjusted line-height */
+            white-space: normal; /* Allow text to wrap if needed */
             max-width: 100%; /* Ensure it doesn't break container */
         }
         @media (min-width: 768px) {
             h1 {
-                font-size: 10rem; /* Fixed large size for desktop */
+                font-size: 2.5rem; /* Matched to button title size on desktop */
             }
         }
         /* Styles for the QR code section */
         .qr-section {
             text-align: center;
-            margin-top: 3rem; /* Space above the QR code */
+            margin-top: 1.5rem; /* Adjusted space above the QR code */
             padding: 1rem;
             background-color: #ffffff;
             border-radius: 1rem;
@@ -146,6 +142,11 @@
             width: 90%; /* Responsive width */
             margin-left: auto;
             margin-right: auto;
+        }
+        @media (min-width: 768px) {
+             .qr-section {
+                 margin-top: 2rem;
+             }
         }
         .qr-section img {
             max-width: 100%;
@@ -161,8 +162,13 @@
     </style>
 </head>
 <body>
+    <!-- The heading is now in its own styled container (card) -->
     <div class="container">
         <h1>David + Audrey - 2025</h1>
+    </div>
+
+    <!-- This container now only holds the buttons -->
+    <div class="container">
         <div class="button-group">
             <!-- Wedding Program Button -->
             <a href="itinerary.html" class="btn btn-program">
