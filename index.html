@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Wedding Website</title>
+    <title>Ryan Wedding Website</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
             background-color: #f0f4f8; /* Light blue-gray background */
             display: flex; /* Keep flexbox for horizontal centering */
             flex-direction: column; /* Stack content vertically */
-            justify-content: flex-start; /* Align content to the top */
+            justify-content: center; /* Center content vertically by default */
             align-items: center; /* Keep content centered horizontally */
             min-height: 100vh;
             margin: 0;
@@ -29,11 +29,14 @@
             width: 100%; /* Take full width on small screens */
             max-width: 700px; /* Max width for desktop */
             animation: fadeIn 1s ease-out;
-            margin-top: 2rem; /* Add some space from the very top */
+            margin-top: 1rem; /* Smaller top margin for mobile */
+            margin-bottom: 1rem; /* Add a consistent bottom margin too */
         }
-        @media (min-width: 768px) { /* Larger padding on desktop */
+        @media (min-width: 768px) { /* Larger padding and margin on desktop */
             .container {
                 padding: 2.5rem;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
             }
         }
         @keyframes fadeIn {
@@ -110,7 +113,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to Our Wedding!</h1>
+        <!-- <h1>Welcome to Our Wedding!</h1> -->
         <div class="button-group">
             <!-- Itinerary Button -->
             <a href="itinerary.html" class="btn btn-itinerary">
