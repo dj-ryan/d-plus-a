@@ -11,9 +11,10 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f0f4f8; /* Light blue-gray background */
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display: flex; /* Keep flexbox for horizontal centering */
+            flex-direction: column; /* Stack content vertically */
+            justify-content: flex-start; /* Align content to the top */
+            align-items: center; /* Keep content centered horizontally */
             min-height: 100vh;
             margin: 0;
             padding: 1rem; /* Added padding for very small screens */
@@ -28,6 +29,7 @@
             width: 100%; /* Take full width on small screens */
             max-width: 700px; /* Max width for desktop */
             animation: fadeIn 1s ease-out;
+            margin-top: 2rem; /* Add some space from the very top */
         }
         @media (min-width: 768px) { /* Larger padding on desktop */
             .container {
